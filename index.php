@@ -86,7 +86,7 @@
                 <P class="titlefront">WELCOME STUDENT</P>
                 <form method="post" name="login_sform">
                     <div class="form-group">
-                        <input class="form-control form-control-lg" id="username" alt="username" type="text" placeholder="Username" autocomplete="off">
+                        <input class="form-control form-control-lg" id="username" alt="username" type="text" placeholder="Username" autocomplete="off" autocapitalize="off">
                     </div>
                     <div class="form-group">
                         <input class="form-control form-control-lg" id="password" type="password" alt="password" placeholder="Password"  autocomplete="off">
