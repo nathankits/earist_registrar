@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2024 at 05:35 PM
+-- Generation Time: Jul 14, 2024 at 01:15 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,11 +39,8 @@ CREATE TABLE `tbl_course` (
 --
 
 INSERT INTO `tbl_course` (`course_id`, `course_name`, `course_decription`, `date_created`) VALUES
-(1, 'BS Computer Science', 'BS Computer Science', '2021-11-16 01:59:38'),
-(2, 'BS Information Technology', 'BS Information Technology', '2021-11-16 01:59:38'),
-(11, 'BS Accountancy', 'BS Accountancy', '2021-11-16 16:14:55'),
-(12, 'bachelor of science in business administration', 'bachelor of science in business administration', '2021-11-19 02:30:51'),
-(13, 'bachelor of science in hospitality management', 'bachelor of science in hospitality management', '2021-11-19 02:35:43');
+(15, 'BSINFOTECH', 'BS in Information Technology', '2024-07-12 00:13:09'),
+(16, 'BSCS', 'BS in Computer Science', '2024-07-12 00:13:53');
 
 -- --------------------------------------------------------
 
@@ -59,16 +56,6 @@ CREATE TABLE `tbl_document` (
   `student_id` int(11) NOT NULL,
   `date_created` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `tbl_document`
---
-
-INSERT INTO `tbl_document` (`document_id`, `document_name`, `document_decription`, `image_size`, `student_id`, `date_created`) VALUES
-(15, 'student_uploads/GRADE.docx', 'sample1', '21098', 2, '2021-11-22 23:32:31'),
-(16, 'student_uploads/Barangay-Information-System-in-PHP.docx', 'sample2', '743361', 2, '2021-11-22 23:32:45'),
-(18, 'student_uploads/Report-2021-11-20-173623.doc', 'sampl6', '5560', 2, '2021-11-22 23:33:20'),
-(19, 'student_uploads/Barangay-Information-System-in-PHP.docx', 'hotdog', '237', 8, '2024-07-09 14:04:04');
 
 -- --------------------------------------------------------
 
@@ -91,15 +78,6 @@ CREATE TABLE `tbl_documentrequest` (
   `notif` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `tbl_documentrequest`
---
-
-INSERT INTO `tbl_documentrequest` (`request_id`, `control_no`, `studentID_no`, `document_name`, `no_ofcopies`, `date_request`, `date_releasing`, `processing_officer`, `status`, `remarks`, `student_id`, `notif`) VALUES
-(6, 'CTRL-33238', 'STDNT-23202323', 'TOR', '1', '2024-07-09', '', 'Nathaniel Quitua', 'Paid', '', 8, 1),
-(7, 'CTRL-8328', 'STDNT-23202323', 'grades', '12', '2024-07-24', '', '', 'Received', '', 8, 1),
-(8, 'CTRL-750310', 'STDNT-223203', 'cor', '2', '2024-07-21', '', '', 'Received', '', 10, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -120,15 +98,6 @@ CREATE TABLE `tbl_payment` (
   `student_id` int(11) NOT NULL,
   `status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `tbl_payment`
---
-
-INSERT INTO `tbl_payment` (`payment_id`, `control_no`, `studentID_no`, `document_name`, `date_releasing`, `ref_number`, `total_amount`, `amount_paid`, `date_ofpayment`, `proof_ofpayment`, `student_id`, `status`) VALUES
-(5, 'CTRL-33238', 'STDNT-23202323', 'TOR', 'Jan 01, 1970', 'mKGPBK0S5p', '50', '50', '2024-07-09', 'GCASH', 8, 'Verified'),
-(6, 'CTRL-33238', 'STDNT-23202323', 'TOR', 'Jan 01, 1970', 'xNobqpDsyJ', '', '', '', 'GCASH', 8, 'Verified'),
-(7, 'CTRL-33238', 'STDNT-23202323', 'TOR', 'Jan 01, 1970', 'QKrmi4H718', '', '', '', 'GCASH', 8, 'Verified');
 
 -- --------------------------------------------------------
 
@@ -238,7 +207,7 @@ ALTER TABLE `tbl_usermanagement`
 -- AUTO_INCREMENT for table `tbl_course`
 --
 ALTER TABLE `tbl_course`
-  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_document`
